@@ -4,7 +4,7 @@
 
 # Site
 title: Zunpeng' Blog
-subtitle: To Be A Lean Developer!
+subtitle: To Be A Learn Developer!
 author: usydapeng
 language: 
 timezone: 
@@ -34,7 +34,7 @@ weibo_username:     usydapeng
 zhihu_username:     usydapeng
 github_username:    usydapeng
 twitter_username:   usydapeng
-facebook_username:  usydapeng
+#facebook_username:  usydapeng
 # linkedin_username:  yu-hsuan-yen
 
 # Build settings
@@ -100,7 +100,21 @@ friends: [
 
 
 #Custom Setting End
-
+qiniu:
+  offline: false
+  sync: true
+  bucket: zeus-static
+  secret_file: qiniu-config.json
+  dirPrefix: /git-blog
+  urlPrefix: http://zeus-static-plain.zunpeng.org
+  local_dir: qiniu_cdn
+  update_exist: true
+  image:
+    folder: img
+  js:
+    folder: js
+  css:
+    folder: css
 
 
 # Directory
@@ -163,10 +177,13 @@ markdown:
     linkify: true
     typographer: true
     quotes: '“”‘’'
-  
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
+# plugins:
+#   - hexo-qiniu-sync
+
 theme: beantech
 
 #sitemap
